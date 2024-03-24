@@ -437,6 +437,8 @@ include_directories(BEFORE ${PROJECT_SOURCE_DIR})
 
 if(${CMAKE_SYSTEM_PROCESSOR} MATCHES "^aarch")
     include_directories(${GFX_DEVELOPMENT_DIR}/third_party/sse2neon)
+elseif(${CMAKE_SYSTEM_PROCESSOR} MATCHES "^loongarch")
+    include_directories(${GFX_DEVELOPMENT_DIR}/third_party/simde)
 endif()
 
 set(headers
