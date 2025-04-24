@@ -39,7 +39,6 @@ if (${CMAKE_SYSTEM_PROCESSOR} MATCHES "^aarch")
     -Werror=return-type
 
     # General optimization options
-    -march=${GMMLIB_MARCH}
     -finline-functions
     -fno-short-enums
     -Wa,--noexecstack
@@ -76,16 +75,6 @@ else()
     -Werror=return-type
 
     # General optimization options
-    -march=${GMMLIB_MARCH}
-    -mpopcnt
-    -msse
-    -msse2
-    -msse3
-    -mssse3
-    -msse4
-    -msse4.1
-    -msse4.2
-    -mfpmath=sse
     -finline-functions
     -fno-short-enums
     -Wa,--noexecstack
@@ -94,8 +83,6 @@ else()
     -DUSE_MMX
     -DUSE_SSE
     -DUSE_SSE2
-    -DUSE_SSE3
-    -DUSE_SSSE3
     # Other common flags
     -fstack-protector
     -fdata-sections

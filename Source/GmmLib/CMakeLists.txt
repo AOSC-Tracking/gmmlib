@@ -165,12 +165,6 @@ else()
     set (GMMLIB_ARCH "32")
 endif()
 
-if (${CMAKE_SYSTEM_PROCESSOR} MATCHES "^aarch")
-    set(GMMLIB_MARCH "armv8-a+fp+simd")
-elseif("${GMMLIB_MARCH}" STREQUAL "")
-    set(GMMLIB_MARCH "corei7")
-endif()
-
 MESSAGE("platform: ${CMAKE_HOST_SYSTEM_NAME}")
 MESSAGE("source_dir: ${BS_DIR_GMMLIB}")
 MESSAGE("arch: ${GMMLIB_ARCH}")
