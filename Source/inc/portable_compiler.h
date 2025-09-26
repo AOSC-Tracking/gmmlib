@@ -37,6 +37,7 @@ OTHER DEALINGS IN THE SOFTWARE.
     #elif defined(__ARM_ARCH)
         #define __stdcall
         #define __cdecl
+    #elif defined(__loongarch_lp64)
     #else
         #define __cdecl         __attribute__((__cdecl__))
         #define __stdcall       __attribute__((__stdcall__))
